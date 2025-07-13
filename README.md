@@ -8,6 +8,15 @@ We apply this logic to machine learning. Instead of solely focusing on misclassi
 
 Our hypothesis is that these "survivors" managed to be classified correctly because they relied on certain indispensable "core features". Our algorithm aims to automatically identify and reinforce these core features, making the model more robust, intelligent, and secure.
 
+## Proof of Concept
+1. Are core features exists?
+ - use pretrained models to extract feature from cifar10
+ - find out which samples are "back safely" and which are "barely make it"
+ - - apply clustering to generate sample confidence
+ - - seperate based on confidence
+ -> resnet50+kmeans has really low prediction accuracy, use orginal resnet prediction to rank sample "damage" instead.
+
+
 ## The "Reinforce the Core" Algorithm
 We introduce a new algorithmic approach that, unlike traditional approaches that "fortify the borders" (focusing on the decision boundary), aims to "reinforce the core" (strengthening the model's understanding of a class's essential identity).
 
